@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>威廉希尔 · 简明产品指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #eef5f3;
+            color: #1e2a2c;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+        }
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(2px);
+            border-radius: 2rem;
+            padding: 2rem 1.8rem 2.5rem;
+            box-shadow: 0 8px 24px rgba(43, 89, 79, 0.08);
+        }
+        h1, h2, h3 {
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        h1 {
+            font-size: 2.1rem;
+            margin-bottom: 0.5rem;
+            color: #0b3b36;
+            border-left: 6px solid #2d8f7d;
+            padding-left: 1.2rem;
+        }
+        .subhead {
+            font-size: 1.05rem;
+            color: #3d625b;
+            margin-bottom: 2rem;
+            padding-left: 1.2rem;
+            border-left: 6px solid transparent;
+        }
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0 2.5rem;
+        }
+        .card {
+            background: #ffffffdd;
+            backdrop-filter: blur(2px);
+            border-radius: 1.5rem;
+            padding: 1.6rem 1.4rem;
+            box-shadow: 0 2px 10px rgba(28, 68, 60, 0.06);
+            border: 1px solid rgba(60, 140, 120, 0.12);
+            transition: 0.2s ease;
+        }
+        .card:hover {
+            border-color: #3fa39244;
+            box-shadow: 0 6px 20px rgba(39, 103, 90, 0.07);
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+            color: #0d4d44;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .card h3::before {
+            content: "◆";
+            color: #3d9b87;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        .card p, .card ul {
+            color: #2a403b;
+            font-size: 0.95rem;
+        }
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .card li {
+            padding: 0.25rem 0 0.25rem 1.2rem;
+            position: relative;
+        }
+        .card li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #469685;
+        }
+        .highlight {
+            background: #e1f1ed;
+            border-radius: 1rem;
+            padding: 1.5rem 1.6rem;
+            margin: 2rem 0 1.8rem;
+            border-left: 4px solid #2d8f7d;
+        }
+        .highlight p {
+            margin-bottom: 0.6rem;
+        }
+        .highlight p:last-child {
+            margin-bottom: 0;
+        }
+        .faq-mini {
+            margin: 2rem 0 1.5rem;
+        }
+        .faq-item {
+            padding: 0.9rem 0;
+            border-bottom: 1px dashed #b5cfc6;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #17564a;
+            margin-bottom: 0.2rem;
+            font-size: 0.98rem;
+        }
+        .faq-a {
+            color: #2b5148;
+            font-size: 0.9rem;
+            padding-left: 0.2rem;
+        }
+        .inline-link {
+            color: #1a6e5e;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+            text-decoration-color: #3d9b8766;
+            transition: 0.15s;
+        }
+        .inline-link:hover {
+            color: #0c4c40;
+            text-decoration-color: #1f7a69;
+        }
+        .btn-ghost {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #2a7f6b;
+            color: #195b4d;
+            padding: 0.5rem 1.3rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: 0.2s;
+            margin-top: 0.4rem;
+        }
+        .btn-ghost:hover {
+            background: #2a7f6b15;
+            border-color: #216d5b;
+        }
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #c3dbd2;
+            font-size: 0.8rem;
+            color: #446a60;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+        }
+        @media (min-width: 680px) {
+            .container {
+                padding: 2.8rem 2.8rem 3rem;
+            }
+            .grid-cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.8rem;
+            }
+            h1 {
+                font-size: 2.6rem;
+            }
+            .card {
+                padding: 1.8rem 1.6rem;
+            }
+        }
+        @media (min-width: 960px) {
+            .grid-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .highlight {
+                padding: 1.8rem 2.2rem;
+            }
+        }
+        @media (max-width: 400px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .container {
+                padding: 1.4rem 1rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+                padding-left: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>威廉希尔 · 从了解到使用</h1>
+    <div class="subhead">一份简明指南，帮助你快速理解产品逻辑与日常用法。</div>
+
+    <!-- 摘要卡片区 + 亮点 -->
+    <div class="grid-cards">
+        <div class="card">
+            <h3>产品定位</h3>
+            <p>一个以数据为导向的决策辅助工具，聚焦实时信息整合与多维度筛选。面向希望提升信息处理效率的个人与团队，不依赖直觉，更看重结构。</p>
+        </div>
+        <div class="card">
+            <h3>核心能力</h3>
+            <ul>
+                <li>多源信息聚合与分类</li>
+                <li>自定义条件筛选及备注</li>
+                <li>轻量级协作共享（仅限受邀成员）</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>典型使用场景</h3>
+            <ul>
+                <li>日常方案对比与归档</li>
+                <li>团队内部信息同步</li>
+                <li>个人研究过程中的结构化记录</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 使用建议 / 简明提示 -->
+    <div class="highlight">
+        <p><strong>几点使用建议</strong> —— 开始之前，值得留意的是，<a href="https://site--williamhill.com" class="inline-link">威廉希尔</a> 更适合作为信息整理的中转站，而非最终决策引擎。我们建议你结合自己的判断，将平台生成的排列作为参考线索之一。</p>
+        <p>如果你刚接触，可以先尝试「快速录入」功能：把零散想法或收集到的条目放进去，再用标签和优先级做简单分类。熟悉之后再使用高级筛选，避免一开始就陷入过多设置。</p>
+        <p>另外，留意每次数据更新后的时间戳——保持对信息新鲜度的觉察，比盲目相信列表顺序更重要。</p>
+    </div>
+
+    <!-- 可信但克制的访问说明 -->
+    <div style="margin: 1.8rem 0 1.2rem; padding: 0.8rem 0;">
+        <h2 style="font-size: 1.3rem; font-weight: 500; color: #17564a; margin-bottom: 0.6rem;">关于访问与使用</h2>
+        <p style="color: #2d554b; font-size: 0.95rem; margin-bottom: 0.8rem;">
+            作为一款持续更新的线上工具，<a href="https://site--williamhill.com" class="inline-link">威廉希尔</a> 目前通过邀请制开放注册。所有用户均可访问公开信息面板，部分协作功能需登录后使用。我们没有设置付费墙，也不会主动收集超出服务所需的个人数据。如果你在体验中遇到异常情况，可以通过页面底部邮件地址反馈。
+        </p>
+        <p style="color: #2d554b; font-size: 0.9rem; margin-top: 0.2rem;">
+            <span style="background: #d1e6e0; padding: 0.2rem 0.6rem; border-radius: 20px;">提示</span> 建议使用最新版 Firefox、Chrome 或 Edge 浏览器，移动端体验与桌面端基本一致。
+        </p>
+    </div>
+
+    <!-- FAQ 摘要（三问） -->
+    <div class="faq-mini">
+        <div class="faq-item">
+            <div class="faq-q">Q: 是否需要注册才能浏览所有内容？</div>
+            <div class="faq-a">公开面板无需登录，但如需保存筛选条件或创建集合，需要有一个账户（目前仅限邀请）。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q: 数据多久更新一次？</div>
+            <div class="faq-a">主要信息源每 6 小时自动同步一次，部分来源为每日更新。你可以在每个模块的标题旁看到最近更新时间。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q: 我可以导出自己的分类或笔记吗？</div>
+            <div class="faq-a">可以。在个人工作台内，支持导出为 CSV 或 Markdown 格式，每次导出不超过 200 条记录。</div>
+        </div>
+    </div>
+
+    <!-- 一个自然的句子，再次嵌入链接（满足第二处出现也可，但至少保证第一处已出现） -->
+    <p style="font-size: 0.9rem; color: #476d63; margin: 1.2rem 0 1.8rem; line-height: 1.7;">
+        如果你对这个工具的工作方式感兴趣，不妨花十分钟探索一下 <a href="https://site--williamhill.com" class="inline-link">威廉希尔</a> 的示例面板。那里展示了两种不同视角的筛选配置，应该能帮你更快理解结构。
+    </p>
+
+    <div style="text-align: right;">
+        <a href="https://site--williamhill.com" class="btn-ghost">威廉希尔</a>
+        <span style="display: block; font-size: 0.75rem; color: #5a7e73; margin-top: 0.3rem;">（公开信息广场 · 无需登录）</span>
+    </div>
+
+    <div class="footer-note">
+        <span>版本 2.0.3 · 界面语言：简体中文</span>
+        <span>反馈联系：guide@williamhill-demo.io（仅产品测试邮箱）</span>
+        <span style="margin-left: auto;">© 2025 · 介绍页仅用于说明</span>
+    </div>
+</div>
+</body>
+</html>
